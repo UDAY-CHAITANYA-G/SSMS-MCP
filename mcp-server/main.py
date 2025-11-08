@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-KonaAI SSMS MCP Server - Main Entry Point
+SSMS MCP Server - Main Entry Point
 
-This is the main entry point for the KonaAI SQL Server Management Studio
+This is the main entry point for the SQL Server Management Studio
 Model Context Protocol (MCP) server. It provides enhanced database access
 capabilities through the MCP protocol.
 

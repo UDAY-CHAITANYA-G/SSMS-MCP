@@ -18,7 +18,7 @@ This directory contains the **4 most essential MCP tests** for the SSMS MCP Serv
 
 ### **Run All Tests**
 ```bash
-cd "C:\Users\UdayChaitanyaGurvind\Desktop\KonaAi\KonaAI Web Application\KonaAI-SSMS-MCP\mcp-server"
+cd mcp-server
 python tests/mcp/run_all_tests.py
 ```
 
@@ -40,8 +40,8 @@ python tests/mcp/test_mcp_resources.py
 ## 📊 **Test Coverage**
 
 ### **Database Tests**
-- ✅ Master database connection (KonaAI)
-- ✅ Data Management database connection (DIT_GDB)
+- ✅ Master database connection
+- ✅ Data Management database connection
 - ✅ Table enumeration
 - ✅ Basic query execution
 - ✅ Connection pooling
@@ -72,7 +72,7 @@ python tests/mcp/test_mcp_resources.py
 #### **Import Errors**
 ```bash
 # Ensure you're in the mcp-server directory
-cd "C:\Users\UdayChaitanyaGurvind\Desktop\KonaAi\KonaAI Web Application\KonaAI-SSMS-MCP\mcp-server"
+cd mcp-server
 ```
 
 #### **Database Connection Errors**

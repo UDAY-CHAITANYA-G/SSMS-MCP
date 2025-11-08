@@ -15,14 +15,14 @@ DATABASE_CREDENTIALS = {
 # Database Server Configuration
 DATABASE_SERVERS = {
     'master': {
-        'server': 'DC-L-',
-        'database': 'KonaAI',
+        'server': 'localhost',
+        'database': 'MasterDB',
         'username': DATABASE_CREDENTIALS['username'],
         'password': DATABASE_CREDENTIALS['password']
     },
     'datamgmt': {
-        'server': 'DC-L-',
-        'database': 'DIT_GDB',
+        'server': 'localhost',
+        'database': 'DataManagementDB',
         'username': DATABASE_CREDENTIALS['username'],
         'password': DATABASE_CREDENTIALS['password']
     }

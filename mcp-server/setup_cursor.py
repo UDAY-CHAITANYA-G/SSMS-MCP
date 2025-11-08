@@ -19,7 +19,7 @@ def create_cursor_config():
     
     config = {
         "mcpServers": {
-            "konaai-ssms": {
+            "ssms-mcp": {
                 "command": "python",
                 "args": ["main.py"],
                 "cwd": str(project_path),

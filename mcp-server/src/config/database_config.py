@@ -32,14 +32,14 @@ class AppConfig(BaseSettings):
     """Application configuration."""
     
     # Master Database Configuration
-    master_db_server: str = Field(default="DC-L-", description="Master DB server")
-    master_db_name: str = Field(default="KonaAI", description="Master database name")
+    master_db_server: str = Field(default="localhost", description="Master DB server")
+    master_db_name: str = Field(default="MasterDB", description="Master database name")
     master_db_user: str = Field(default="", description="Master DB username (empty for Windows Auth)")
     master_db_password: str = Field(default="", description="Master DB password (empty for Windows Auth)")
     
     # Data Management Database Configuration
-    data_mgmt_db_server: str = Field(default="DC-L-", description="Data Management DB server")
-    data_mgmt_db_name: str = Field(default="DIT_GDB", description="Data Management database name")
+    data_mgmt_db_server: str = Field(default="localhost", description="Data Management DB server")
+    data_mgmt_db_name: str = Field(default="DataManagementDB", description="Data Management database name")
     data_mgmt_db_user: str = Field(default="", description="Data Management DB username (empty for Windows Auth)")
     data_mgmt_db_password: str = Field(default="", description="Data Management DB password (empty for Windows Auth)")
     

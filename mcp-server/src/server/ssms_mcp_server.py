@@ -1,5 +1,5 @@
 """
-KonaAI SSMS MCP Server
+SSMS MCP Server
 
 Main MCP server implementation for SQL Server Management Studio integration.
 Provides enhanced database access capabilities through the Model Context Protocol.
@@ -47,7 +47,7 @@ logger = logging.getLogger(__name__)
 
 class SSMSServer:
     """
-    KonaAI SSMS MCP Server implementation.
+    SSMS MCP Server implementation.
     
     Provides comprehensive SQL Server database access through MCP protocol.
     """
@@ -55,7 +55,7 @@ class SSMSServer:
     def __init__(self):
         """Initialize the MCP server with all components."""
         self.settings = AppConfig()
-        self.server = Server("konaai-ssms")
+        self.server = Server("ssms-mcp")
         
         # Initialize database connections
         self.master_db = MasterDatabase(self.settings.get_master_db_config())

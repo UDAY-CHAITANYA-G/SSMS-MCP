@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "konaai-ssms": {
+    "ssms-mcp": {
       "command": "python",
       "args": ["main.py"],
-      "cwd": "C:\\Users\\UdayChaitanyaGurvind\\Desktop\\KonaAi\\KonaAI Web Application\\KonaAI-SSMS-MCP\\mcp-server",
+      "cwd": "${workspaceFolder}/mcp-server",
       "env": {
         "PYTHONPATH": "."
       }

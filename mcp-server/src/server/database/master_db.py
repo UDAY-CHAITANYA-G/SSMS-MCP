@@ -1,5 +1,5 @@
 """
-Master database operations for KonaAI Master database.
+Master database operations for Master database.
 """
 
 import logging
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class MasterDatabase(BaseDatabase):
     """
-    Master database operations for KonaAI Master database.
+    Master database operations for Master database.
     """
     
     def __init__(self, db_config: DatabaseConfig):

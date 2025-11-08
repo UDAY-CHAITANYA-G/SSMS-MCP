@@ -1,5 +1,5 @@
 """
-Data Management database operations for KonaAI Data Management database.
+Data Management database operations for Data Management database.
 """
 
 import logging
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class DataManagementDatabase(BaseDatabase):
     """
-    Data Management database operations for KonaAI Data Management database.
+    Data Management database operations for Data Management database.
     """
     
     def __init__(self, db_config: DatabaseConfig):

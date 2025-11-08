@@ -3,11 +3,11 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "konaai-ssms-mcp"
+name = "ssms-mcp"
 version = "1.0.0"
-description = "Python MCP Server for SQL Server Management Studio - KonaAI Database Access"
+description = "Python MCP Server for SQL Server Management Studio - Database Access"
 authors = [
-    {name = "KonaAI Team", email = "team@konaai.com"}
+    {name = "SSMS MCP Contributors"}
 ]
 readme = "README.md"
 license = {text = "MIT"}
@@ -35,6 +35,6 @@ dependencies = [
 ssms-mcp = "src.main:main"
 
 [project.urls]
-Homepage = "https://github.com/konaai/ssms-mcp"
-Repository = "https://github.com/konaai/ssms-mcp"
-Issues = "https://github.com/konaai/ssms-mcp/issues"
+Homepage = "https://github.com/your-username/ssms-mcp"
+Repository = "https://github.com/your-username/ssms-mcp"
+Issues = "https://github.com/your-username/ssms-mcp/issues"

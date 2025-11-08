@@ -1,10 +1,10 @@
 @echo off
-REM KonaAI SSMS MCP Server Launcher
+REM SSMS MCP Server Launcher
 REM This batch file starts the MCP server with proper environment settings
 
 cd /d "%~dp0"
 
-echo Starting KonaAI SSMS MCP Server...
+echo Starting SSMS MCP Server...
 echo ====================================
 echo Working Directory: %CD%
 echo Python Version:

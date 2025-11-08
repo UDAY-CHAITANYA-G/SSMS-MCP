@@ -1,21 +1,21 @@
 ## SSMS MCP Complete Guide
 
 ### 1) Overview
-The KonaAI SSMS MCP (Model Context Protocol) server exposes SQL Server metadata and execution capabilities to IDE agents (e.g., Cursor) via a local stdio server. It provides:
+The SSMS MCP (Model Context Protocol) server exposes SQL Server metadata and execution capabilities to IDE agents (e.g., Cursor) via a local stdio server. It provides:
 - Tools (execute queries, CRUD, schema inspection, stored procedures)
 - Read-only Resources (tables, views, procedures, triggers) discoverable by the client
 
-Repo location: `KonaAI-SSMS-MCP/mcp-server`
+Repo location: `SSMS-MCP/mcp-server`
 Entry point: `mcp-server/main.py`
-Server name/id: `konaai-ssms`
+Server name/id: `ssms-mcp`
 
 ### 2) Architecture
 - Transport: MCP stdio (`mcp.server.stdio.stdio_server`)
 - Core: `src/server/ssms_mcp_server.py` registers handlers:
   - list_tools, call_tool, list_resources, read_resource
 - Databases: two connections via pooling layer
-  - `MasterDatabase` → KonaAI Master DB
-  - `DataManagementDatabase` → DIT_GDB Data Management DB
+  - `MasterDatabase` → Master DB
+  - `DataManagementDatabase` → Data Management DB
 - Tools (in `src/server/tools`):
   - QueryTool: `execute_query`
   - CrudTool: `insert_data`, `update_data`, `delete_data`
@@ -33,28 +33,28 @@ File: `src/config/database_config.py`
 
 Example `.env`:
 ```
-master_db_server=DC-L-
-master_db_name=KonaAI
-data_mgmt_db_server=DC-L-
-data_mgmt_db_name=DIT_GDB
+master_db_server=localhost
+master_db_name=MasterDB
+data_mgmt_db_server=localhost
+data_mgmt_db_name=DataManagementDB
 # Optional SQL auth
 # master_db_user=sa
 # master_db_password=***
 ```
 
 ### 4) Installation & Requirements
-- Python (as provided by KonaAI_ML pyenv shim)
+- Python 3.8+
 - ODBC Driver 17 for SQL Server
 - Network access to SQL Server instance(s)
 
 ### 5) Starting the Server
 Manual (for debugging):
 ```powershell
-cd "KonaAI-SSMS-MCP/mcp-server"
-"C:\Program Files\KonaAI_ML\.pyenv\pyenv-win\shims\python.bat" -u .\main.py
+cd "mcp-server"
+python -u main.py
 ```
 
-Via Cursor (recommended): Settings → MCP Servers → enable `user-konaai-ssms`.
+Via Cursor (recommended): Settings → MCP Servers → enable `user-ssms-mcp`.
 
 Restart: toggle server off/on in Cursor, or restart Cursor window.
 
@@ -151,6 +151,6 @@ SELECT OBJECT_DEFINITION(OBJECT_ID('App.GetQuestionnaire'));
 - Correct trigger schema using `OBJECT_SCHEMA_NAME(t.object_id)`
 
 ### 15) Contacts
-- Owner: KonaAI Data Platform Team
+- Owner: SSMS MCP Contributors
 
 

@@ -157,3 +157,7 @@ temp/
 # Configuration files with sensitive data
 config.json
 secrets.json
+*.env
+.env.*
+!env.example
+!*.env.example

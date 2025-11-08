@@ -1,4 +1,4 @@
-# KonaAI SSMS MCP Server
+# SSMS MCP Server
 
 A comprehensive Model Context Protocol (MCP) server for SQL Server Management Studio integration, providing enhanced database access capabilities through Python.
 
@@ -9,7 +9,7 @@ This repository contains a Python-based MCP server that replaces the previous Ty
 ## Features
 
 ### 🔧 **Core Capabilities**
-- **Dual Database Support**: Master Database (`KonaAI_Master`) and Data Management Database (`DIT_GDB`)
+- **Dual Database Support**: Master Database and Data Management Database
 - **SQL Server Authentication**: Secure username/password authentication
 - **Connection Pooling**: Efficient connection management with pyodbc
 - **Parameterized Queries**: SQL injection prevention through parameterized execution
@@ -31,7 +31,7 @@ This repository contains a Python-based MCP server that replaces the previous Ty
 ## Project Structure
 
 ```
-KonaAI-SSMS-MCP/
+SSMS-MCP/
 ├── mcp-server/               # MCP Server Implementation
 │   ├── main.py              # Main entry point
 │   ├── mcp_config.json     # MCP client configuration
@@ -83,19 +83,19 @@ python src/main.py
    ```
 2. Configure databases in `.env` (Windows Auth if user/password empty):
    ```
-   master_db_server=DC-L-
-   master_db_name=KonaAI
-   data_mgmt_db_server=DC-L-
-   data_mgmt_db_name=DIT_GDB
+   master_db_server=localhost
+   master_db_name=MasterDB
+   data_mgmt_db_server=localhost
+   data_mgmt_db_name=DataManagementDB
    ```
 3. Ensure Microsoft ODBC Driver 17 for SQL Server is installed.
 
 ### Start / Restart
-- In Cursor: Settings → MCP Servers → enable/toggle `user-konaai-ssms`.
+- In Cursor: Settings → MCP Servers → enable/toggle `user-ssms-mcp`.
 - Manual (debug):
   ```powershell
   cd "mcp-server"
-  "C:\\Program Files\\KonaAI_ML\\.pyenv\\pyenv-win\\shims\\python.bat" -u .\main.py
+  python -u main.py
   ```
 
 ### Use
